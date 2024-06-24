@@ -25,14 +25,22 @@ html, body {
 .titulo h1{
     width: 50%;
 }
-.icone{
-    /* background-color: blue; */
-    width: 48px; /* Largura da imagem */
-    height: 48px; /* Altura da imagem */
+
+#aviso {
+    opacity: 0;
+    transform: translateY(-90px);
+    transition: opacity 0.5s, transform 0.5s;
+    position: absolute;
+    border: 2px solid rgb(205 205 205);
+    padding: 16px;
+    border-radius: 8px;
+    color: rgb(205 205 205);
+    font-size: 16px;
+    z-index: 1;
 }
-.rotated {
-    transform: rotate(720deg);
-    transition: transform 2s;
+#aviso.show {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .campos {
@@ -41,6 +49,7 @@ html, body {
     justify-content: space-between;
     height: 100%;
     padding: 0 20px 20px 20px;
+    z-index: 1;
 }
 .campo {
     width: 47.5%;
@@ -68,4 +77,13 @@ button {
     background-color: rgb(21 21 21);
     color: white;
     border: 1px solid rgb(205, 205, 205);
+}
+.icone{
+    /* background-color: blue; */
+    width: 48px; /* Largura da imagem */
+    height: 48px; /* Altura da imagem */
+}
+.rotated {
+    transform: rotate(720deg);
+    transition: transform 2s;
 }

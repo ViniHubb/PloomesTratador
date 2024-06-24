@@ -35,4 +35,11 @@ document.getElementById("botao").addEventListener("click", function() {
 
     const image = document.getElementById('icone');
     image.classList.toggle('rotated');
+
+    const aviso = document.getElementById("aviso");
+    aviso.classList.add("show");
+
+    setTimeout(function() {
+        aviso.classList.remove("show");
+    }, 2000);
 });
